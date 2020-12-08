@@ -1,0 +1,35 @@
+<resources>
+    <!-- >For KeyboardFragment<-->
+    <string name="app_name">Converter</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_0">0</string>
+    <string name="dot">.</string>
+    <string name="btn_clear">C</string>
+
+    <!-- >For DataFragment<-->
+    <string name="convert_button">Convert</string>
+    <string name="menu_weight">Weight</string>
+    <string name="menu_distance">Distance</string>
+    <string name="menu_pressure">Pressure</string>
+    <string name="button_copy">Copy</string>
+
+    <string name="unit_meter">Meter</string>
+    <string name="unit_foot">Foot</string>
+    <string name="unit_inch">Inch</string>
+
+    <string name="unit_gram">Gram</string>
+    <string name="unit_pound">Pound</string>
+    <string name="unit_ounce">Ounce</string>
+
+    <string name="unit_pascal">Pascal</string>
+    <string name="unit_atmosphere">Atmosphere</string>
+    <string name="unit_torr">Torr</string>
+</resources>
