@@ -1,0 +1,50 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/messages_header">
+
+        <EditTextPreference
+            app:key="signature"
+            app:title="@string/signature_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/theme">
+
+        <SwitchPreferenceCompat
+            app:key="app_theme"
+            app:title="@string/night_mode"
+            app:summary="@string/night_mode_summary"
+            app:useSimpleSummaryProvider="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/language">
+        <ListPreference
+            app:key="language"
+            app:title="@string/locale"
+            app:summary="@string/locale_summary"
+            app:entries="@array/locale_entries"
+            app:entryValues="@array/locale_values">
+
+        </ListPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/clear">
+        <Preference
+            app:title="@string/drop"
+            app:summary="@string/drop_summary"
+            app:key="drop"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/change_font">
+        <ListPreference
+            app:key="font"
+            app:title="@string/choose_font"
+            app:summary="@string/font_summary"
+            app:entries="@array/font_entries"
+            app:entryValues="@array/font_values"/>
+    </PreferenceCategory>
+</PreferenceScreen>

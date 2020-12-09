@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Tabata timer</string>
+    <string name="hello">Hello</string>
+    <string name="start_program">Start program</string>
+    <string name="activity">activity</string>
+    <string name="preparation">Preparation</string>
+    <string name="activity_image">Activity image</string>
+    <string name="minus_value">minus_value</string>
+    <string name="plus_value">plus_value</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <string name="night_mode">Night Mode</string>
+    <string name="night_mode_summary">Choose theme of application</string>
+    <string name="locale">Locale</string>
+    <string name="locale_summary">Choose locale of application</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="create">create</string>
+    <string name="settings">Settings</string>
+    <string name="action_settings">Action settings</string>
+    <string name="training_name">Training title</string>
+    <string name="list_item_configurations">List item configurations</string>
+    <string name="start">START</string>
+    <string name="save_changes">Save changes</string>
+    <string name="delete">Delete</string>
+    <string name="choose_color">Choose color</string>
+    <string name="change_title">Change title</string>
+    <string name="hole_time">Hole time</string>
+    <string name="previous_cycle">Previous cycle</string>
+    <string name="next_cycle">Next cycle</string>
+    <string name="block_changes">Block changes</string>
+    <string name="Paise">TODO</string>
+    <string name="pause">Pause</string>
+    <string name="stage">Stage</string>
+    <string name="your_trainings">Your trainings:</string>
+    <string name="language">Language</string>
+    <string name="theme">Theme</string>
+    <string name="stretch">Stretch</string>
+    <string name="work">Work</string>
+    <string name="rest">Relax</string>
+    <string name="cycle">Cycles</string>
+    <string name="sets">Sets</string>
+    <string name="sets_rest">Rest between sets</string>
+    <string name="drop">Drop data</string>
+    <string name="drop_data">Drop saved data</string>
+    <string name="drop_summary">Drop all saved data from your phone</string>
+    <string name="clear">Clear saved data</string>
+    <string name="drop_text">drop</string>
+    <string name="change_font">Change text size</string>
+    <string name="choose_font">Choose size</string>
+    <string name="font_summary">Choose value of application font size</string>
+    <string name="large_text">Large text</string>
+    <string name="medium_text">Medium text</string>
+    <string name="small_text">Small text</string>
+    <string name="training_summary">Whole training time</string>
+    <string name="cycle_number">Cycle number</string>
+    <string name="sets_number">Sets number</string>
+</resources>
