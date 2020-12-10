@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Battleship</string>
+    <string name="login_input_placeholder">Input e-mail</string>
+    <string name="password_input_placeholder">Input password</string>
+    <string name="sign_in_btn_text">Sign in</string>
+    <string name="sign_up_btn_text">Sign up</string>
+
+    <string name="sign_out_btn_text">Sign out</string>
+    <string name="room_id_input_placeholder">Input room id</string>
+    <string name="connect_room_btn_text">Connect</string>
+    <string name="create_room_btn_text">Create room</string>
+
+    <string name="user_turn">Your turn</string>
+    <string name="enemy_turn">Wait for enemy move</string>
+</resources>
