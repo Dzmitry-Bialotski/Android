@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RoomActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/place_ships_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/place_ships"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="10dp">
+    </TextView>
+
+    <by.belotskiy.battleship.game.Field
+        android:id="@+id/field_create"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/blue"
+        >
+
+    </by.belotskiy.battleship.game.Field>
+
+    <EditText
+        android:id="@+id/write_room_id_edit_text"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal"
+        android:hint="@string/write_room_id"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        android:layout_marginBottom="5dp">
+    </EditText>
+
+    <Button
+        android:id="@+id/create_button"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"
+        android:text="@string/create">
+    </Button>
+
+    <Button
+        android:id="@+id/connect_button"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"
+        android:text="@string/connect">
+    </Button>
+    <Button
+        android:id="@+id/start_playing_button"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"
+        android:text="@string/start_playing">
+    </Button>
+
+</LinearLayout>

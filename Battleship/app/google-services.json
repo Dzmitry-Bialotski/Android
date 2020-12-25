@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "61571371640",
+    "project_id": "battleship-edf73",
+    "storage_bucket": "battleship-edf73.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61571371640:android:c9389365261b83052f138d",
+        "android_client_info": {
+          "package_name": "by.belotskiy.battleship"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61571371640-idlut5dpu0jg46p9b063kujq9lpds5r8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTcR5TI1zVnu4G2t3-A-xaz30QJwhEd64"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61571371640-idlut5dpu0jg46p9b063kujq9lpds5r8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

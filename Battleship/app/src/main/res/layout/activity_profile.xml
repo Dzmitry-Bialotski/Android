@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProfileActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/colorPrimary">
+    <TextView
+        android:id="@+id/profile_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/profile"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="20dp">
+    </TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/white">
+            </TextView>
+
+            <EditText
+                android:id="@+id/name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="@string/write_user_name"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20sp">
+            </EditText>
+        </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:elevation="12dp"
+            android:id="@+id/view2"
+            app:cardCornerRadius="40dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9"
+            android:layout_margin="25dp">
+            <ImageView
+                android:id="@+id/user_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp">
+            </ImageView>
+        </androidx.cardview.widget.CardView>
+
+
+        <Button
+            android:id="@+id/choose_image_button"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="@string/choose_image"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp">
+        </Button>
+
+        <Button
+            android:id="@+id/upload_image_button"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="@string/upload_image"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/white">
+        </Button>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/white">
+    </Button>
+
+</LinearLayout>
