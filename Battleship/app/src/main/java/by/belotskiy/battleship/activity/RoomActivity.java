@@ -8,11 +8,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 
 import by.belotskiy.battleship.R;
 import by.belotskiy.battleship.game.Field;
@@ -20,18 +17,17 @@ import by.belotskiy.battleship.game.Fleet;
 import by.belotskiy.battleship.game.enums.FieldType;
 import by.belotskiy.battleship.game.service.FleetService;
 import by.belotskiy.battleship.util.IdGenerator;
+import by.belotskiy.battleship.view_model.RoomViewModel;
 
 public class RoomActivity extends AppCompatActivity {
-    private FirebaseDatabase database;
-    private FirebaseAuth mAuth;
+    RoomViewModel viewModel;
     private Field field;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room);
-        mAuth = FirebaseAuth.getInstance();
-        database = FirebaseDatabase.getInstance();
-        //database.getReference("rooms").removeValue();
+        viewModel = ViewModelProviders.of(this, new ViewModelProvider.NewInstanceFactory())
+                .get(RoomViewModel.class);
         field = (Field) findViewById(R.id.field_create);
         field.setFieldType(FieldType.CREATE_FIELD);
         field.generateFleet();
@@ -44,14 +40,14 @@ public class RoomActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String roomId = IdGenerator.generateRoomId();
                 roomId_et.setText(roomId);
-                saveRoomToDb(roomId);
+                viewModel.saveRoomToDb(roomId);
             }
         });
         connect_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String roomId = roomId_et.getText().toString();
-                saveConnectedUserToDb(roomId);
+                viewModel.saveConnectedUserToDb(roomId);
             }
         });
         play_btn.setOnClickListener(new View.OnClickListener() {
@@ -62,7 +58,7 @@ public class RoomActivity extends AppCompatActivity {
                 if(fleet != null){
                     Toast.makeText(getApplicationContext(), "Fleet is nice", Toast.LENGTH_SHORT).show();
                     String roomId = roomId_et.getText().toString();
-                    saveFieldToDb(field, roomId);
+                    viewModel.saveFieldToDb(field, roomId);
                     Intent intent = new Intent(getApplicationContext() , GameActivity.class);
                     intent.putExtra("roomId", roomId);
                     startActivity(intent);
@@ -72,26 +68,5 @@ public class RoomActivity extends AppCompatActivity {
             }
         });
     }
-    private void saveRoomToDb(String roomId){
-        DatabaseReference roomReference = database.getReference("rooms").child(roomId);
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        roomReference.setValue(currentUser.getUid());
-    }
-    private void saveConnectedUserToDb(String roomId){
-        DatabaseReference roomReference = database.getReference("rooms").child(roomId);
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        roomReference.setValue(currentUser.getUid());
-    }
-    private void saveFieldToDb(Field field, String roomId){
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        DatabaseReference userFieldReference = database.getReference("rooms")
-                                                .child(roomId).child(currentUser.getUid()).child("field");
-        for(int i = 0; i < field.getSize(); i++) {
-            for(int j = 0; j < field.getSize(); j++){
-                userFieldReference.child(String.valueOf(i) + String.valueOf(j)).setValue(field.getCells()[i][j]);
-            }
-        }
-        database.getReference("rooms")
-                .child(roomId).child("CurrentPlayer").setValue(mAuth.getCurrentUser().getUid());
-    }
+
 }

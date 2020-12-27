@@ -17,6 +17,7 @@ import by.belotskiy.battleship.game.enums.CellType;
 import by.belotskiy.battleship.game.enums.FieldType;
 import by.belotskiy.battleship.game.service.FleetService;
 import by.belotskiy.battleship.game.util.FleetGenerator;
+import by.belotskiy.battleship.view_model.GameViewModel;
 
 public class Field extends View {
     private final int size = 10;
@@ -234,5 +235,15 @@ public class Field extends View {
     @Override
     public void setOnClickListener(OnClickListener l) {
         onClickListener = l;
+    }
+
+    public void updateValue(GameViewModel viewModel){
+        if (getFieldType() != FieldType.BLOCKED) {
+            Cell cell = getCurrentCell();
+            if (!isAlreadyChecked) {
+                viewModel.roomRef.child(viewModel.opponentId).child("field").child(String.valueOf(cell.getX()) + String.valueOf(cell.getY()))
+                        .setValue(cell.getCellType().toString());
+            }
+        }
     }
 }
