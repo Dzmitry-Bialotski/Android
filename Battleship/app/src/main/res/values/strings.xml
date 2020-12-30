@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">BattleShip</string>
+<!--activity_main-->
+    <string name="play">Play</string>
+    <string name="profile">Profile</string>
+    <string name="statistics">Statistics</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+
+<!--activity_profile-->
+    <string name="name">Name: </string>
+    <string name="write_user_name">Write user name: </string>
+    <string name="choose_image">Choose image</string>
+    <string name="upload_image">Upload image</string>
+    <string name="save">Save Changes</string>
+<!--activity_login-->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+<!--activity_room-->
+    <string name="preparation">Preparation stage</string>
+    <string name="place_ships">Place your ships</string>
+    <string name="write_room_id">Write room id</string>
+    <string name="create">Create</string>
+    <string name="connect">Connect</string>
+    <string name="start_playing">Start playing</string>
+<!--activity_statistics-->
+    <string name="win">Win</string>
+    <string name="lose">Lose</string>
+    <string name="opponent">opponent</string>
+    <string name="time">time</string>
+</resources>
