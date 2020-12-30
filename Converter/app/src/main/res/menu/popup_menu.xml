@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/group_distance"
+        android:checkableBehavior="single"
+        android:visible="false">
+        <item
+            android:id="@+id/item_meter"
+            android:title="@string/unit_meter" />
+        <item
+            android:id="@+id/item_foot"
+            android:title="@string/unit_foot"/>
+        <item
+            android:id="@+id/item_inch"
+            android:title="@string/unit_inch"/>
+    </group>
+
+    <group android:id="@+id/group_weight"
+        android:checkableBehavior="single"
+        android:visible="false">
+        <item
+            android:id="@+id/item_gram"
+            android:title="@string/unit_gram" />
+        <item
+            android:id="@+id/item_pound"
+            android:title="@string/unit_pound"/>
+        <item
+            android:id="@+id/item_ounce"
+            android:title="@string/unit_ounce"/>
+    </group>
+
+    <group android:id="@+id/group_pressure"
+        android:checkableBehavior="single"
+        android:visible="false">
+        <item
+            android:id="@+id/item_atmosphere"
+            android:title="@string/unit_atmosphere" />
+        <item
+            android:id="@+id/item_pascal"
+            android:title="@string/unit_pascal"/>
+        <item
+            android:id="@+id/item_torr"
+            android:title="@string/unit_torr"/>
+    </group>
+</menu>

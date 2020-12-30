@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/item_weight"
+        android:title="@string/menu_weight"/>
+
+    <item android:id="@+id/item_distance"
+        android:title="@string/menu_distance"/>
+
+    <item android:id="@+id/item_pressure"
+        android:title="@string/menu_pressure"/>
+</menu>

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.example.converter.premium",
+  "variantName": "premiumRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 1000,
+      "versionName": "1.0.0-premium",
+      "enabled": true,
+      "outputFile": "app-premium-release.apk"
+    }
+  ]
+}
